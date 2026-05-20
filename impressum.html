@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impressum & Kontakt - Postl Software</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Spezifisches CSS für das Kontaktformular */
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            max-width: 500px;
+            margin-top: 1rem;
+        }
+        .contact-form label {
+            font-weight: bold;
+            color: var(--brand-dark-green);
+        }
+        .contact-form input, .contact-form textarea {
+            padding: 0.75rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-family: inherit;
+            font-size: 1rem;
+        }
+        .contact-form input:focus, .contact-form textarea:focus {
+            outline: 3px solid var(--brand-neon-green);
+            border-color: var(--brand-dark-green);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>
+            <img src="logo.png" alt="Postl Software Logo" style="width: 50px; height: auto; vertical-align: middle;">
+            Postl Software
+        </h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Shop</a></li>
+                <li><a href="about.html">Über uns (Marke)</a></li>
+                <li><a href="impressum.html">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Kontaktieren Sie uns</h2>
+            
+            <form class="contact-form" onsubmit="event.preventDefault(); alert('Vielen Dank für Ihre Nachricht! Dies ist ein gemockter Prozess, die Nachricht wurde (simuliert) erfolgreich versendet.'); this.reset();">
+                <label for="name">Ihr Name:</label>
+                <input type="text" id="name" name="name" required placeholder="Max Mustermann">
+                
+                <label for="email">Ihre E-Mail-Adresse:</label>
+                <input type="email" id="email" name="email" required placeholder="max@beispiel.at">
+                
+                <label for="message">Ihre Nachricht:</label>
+                <textarea id="message" name="message" rows="5" required placeholder="Wie können wir Ihnen helfen?"></textarea>
+                
+                <button type="submit">Nachricht senden</button>
+            </form>
+        </section>
+
+        <section style="margin-top: 4rem;">
+            <h2>Impressum</h2>
+            <p>Informationspflicht laut § 5 E-Commerce Gesetz und Offenlegungspflicht laut § 24 Mediengesetz.</p>
+            
+            <h3>Medieninhaber & Herausgeber</h3>
+            <p>
+                <strong>Postl Software (Fiktives Start-Up für Studienprojekt)</strong><br>
+                Matschgasse 6/7<br>
+                1160 Wien<br>
+                Österreich
+            </p>
+
+            <h3>Kontaktdaten</h3>
+            <p>
+                <strong>E-Mail:</strong> kontakt@postl-software.mock<br>
+                <strong>Telefon:</strong> +43 566 676 77
+            </p>
+
+            <h3>Unternehmensgegenstand</h3>
+            <p>Entwicklung, Vertrieb und Bereitstellung von Softwareanwendungen (Computerprogrammen).</p>
+
+            <h3>Grundlegende Richtung der Website</h3>
+            <p>Diese Website dient der Präsentation und dem Vertrieb der Software "Postl ToDo" sowie der Information über das Unternehmen Postl Software.</p>
+        </section>
+    </main>
+
+    <footer>
+        <hr>
+        <nav>
+            <ul>
+                <li><a href="impressum.html">Impressum</a></li>
+                <li><a href="datenschutz.html">Datenschutz</a></li>
+                <li><a href="lizenz.html">Lizenz (EULA)</a></li>
+                <li><a href="barrierefreiheit.html">Barrierefreiheit</a></li>
+                <li><a href="mediennachweise.html">Mediennachweise</a></li>
+            </ul>
+        </nav>
+        <p>&copy; 2026 Postl Software</p>
+    </footer>
+</body>
+</html>

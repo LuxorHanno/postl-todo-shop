@@ -4,11 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Postl ToDo - Deine lokale Aufgabenverwaltung</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <style>
+        body { font-family: 'Roboto', sans-serif; } /* Wendet die Schrift an */
+        .media-demo { margin-top: 2rem; padding: 1rem; background: #eee; border-radius: 8px; }
+        .logo-img { width: 50px; height: 50px; vertical-align: middle; }
+    </style>
 </head>
 <body>
     <header>
-        <h1>Postl Software</h1>
+<h1>
+        <img src="logo.png" alt="Postl Software Logo" style="width: 50px; height: auto; vertical-align: middle;">
+        Postl Software
+    </h1>
         <nav>
             <ul>
                 <li><a href="index.html">Shop</a></li>
@@ -23,9 +34,20 @@
             <h2>Postl ToDo - 100% Lokal, 100% Privat</h2>
             <p>Verwalte deine Aufgaben sicher auf deinem eigenen PC. Keine Cloud, keine Abos.</p>
             
-            <button onclick="alert('Vielen Dank für deinen Kauf! Der Download startet (simuliert).')">
+            <audio id="kaufSound" src="purchase.mp3" preload="auto"></audio>
+            
+            <button onclick="document.getElementById('kaufSound').play(); alert('Vielen Dank für deinen Kauf!');">
                 Pro-Version kaufen (Einmalig 19,99€)
             </button>
+        </section>
+
+        <section class="media-demo">
+            <h3>App Demo (Video)</h3>
+            <video width="100%" controls poster="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Video_icon.svg/512px-Video_icon.svg.png">
+                <source src="demo.mp4" type="video/mp4">
+                Dein Browser unterstützt das Video-Tag nicht.
+            </video>
+            <p><small><em>(Simuliertes Produktvideo)</em></small></p>
         </section>
     </main>
 
@@ -42,5 +64,10 @@
         </nav>
         <p>&copy; 2026 Postl Software</p>
     </footer>
+    <div id="cookie-banner" style="position: fixed; bottom: 0; left: 0; right: 0; background-color: var(--brand-dark-green); color: white; padding: 1.5rem; text-align: center; z-index: 1000; box-shadow: 0 -4px 10px rgba(0,0,0,0.1);">
+        <p style="margin-bottom: 1rem;">Wir verwenden funktionale Cookies sowie Analyse-Tools. Für Analyse-Tools benötigen wir Ihre Einwilligung gemäß § 165 TKG 2021. Weitere Details finden Sie in unserer <a href="datenschutz.html" style="color: var(--brand-neon-green); text-decoration: underline;">Datenschutzerklärung</a>.</p>
+        <button onclick="document.getElementById('cookie-banner').style.display='none'" style="margin-top: 0; background-color: white; color: var(--brand-dark-green);">Nur Notwendige</button>
+        <button onclick="document.getElementById('cookie-banner').style.display='none'" style="margin-top: 0; margin-left: 1rem; background-color: var(--brand-neon-green); color: var(--text-color);">Alle Akzeptieren</button>
+    </div>
 </body>
 </html>
